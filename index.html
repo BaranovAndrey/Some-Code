@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	.more {
+		display: none;
+		width: 600px; 
+	}
+	a.showLink, a.hideLink {
+		text-decoration: none;
+		margin: 30px;
+	}
+
+</style>
+</head>
+<body>
+<a href="#" id="example-show" class="showLink" 
+onclick="showHide('example');return false;"><button>Детальніше</button></a>
+
+<div id="example" class="more">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores nobis fugiat dicta modi, rem nihil fuga velit accusamus, a esse possimus error quaerat perferendis deserunt deleniti quos eum numquam.</p>
+	<a href="#" id="example-hide" class="hideLink" 
+	onclick="showHide('example');return false;"><button>Закрити</button></a>
+	
+</div>
+
+	
+	<a href="#" id="example-show1" class="showLink" 
+onclick="showHide('example');return false;"><button>Детальніше</button></a>
+
+<div id="example" class="more">
+	<p>12365456987554895615644561561564644645616541564894646465464644efdrgkgjfghudfhskhdhuisfhfidiughufghkfjbn</p>
+	<a href="#" id="example-hide" class="hideLink" 
+	onclick="showHide('example');return false;"><button>Закрити</button></a>
+</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+	function showHide(shID) {
+		if (document.getElementById(shID)) {
+			if (document.getElementById(shID+'-show').style.display != 'none') {
+				document.getElementById(shID+'-show').style.display = 'none';
+				document.getElementById(shID).style.display = 'block';
+			}
+			else {
+				document.getElementById(shID+'-show').style.display = 'inline';
+				document.getElementById(shID).style.display = 'none';
+			}
+		}
+	}
+</script>
+<script>
+	function showHide(shID) {
+		if (document.getElementById(shID)) {
+			if (document.getElementById(shID+'-show1').style.display != 'none') {
+				document.getElementById(shID+'-show1').style.display = 'none';
+				document.getElementById(shID).style.display = 'block';
+			}
+			else {
+				document.getElementById(shID+'-show1').style.display = 'inline';
+				document.getElementById(shID).style.display = 'none';
+			}
+		}
+	}
+</script>
+</body>
+</html>
